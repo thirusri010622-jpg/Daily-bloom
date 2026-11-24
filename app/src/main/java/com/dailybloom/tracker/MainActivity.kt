@@ -50,7 +50,8 @@ class MainActivity : ComponentActivity() {
                 Manifest.permission.POST_NOTIFICATIONS
             )
         }
-
+ReminderReceiver.createChannel(this)
+ReminderScheduler.scheduleAll(this)
         setContent {
             DailyBloomApp(this)
         }
